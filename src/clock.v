@@ -18,7 +18,7 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module count(
+module clock(
 input clk,
 input hours_increment,
 input hours_decrement,
@@ -133,7 +133,7 @@ begin
 				t_secs <= 0;
 				minutes <= minutes + 1;
 				if (minutes == 9)
-			    begin
+			    	begin
 					minutes <= 0;
 					t_mins <= t_mins + 1;
 					if (t_mins == 5)
@@ -153,8 +153,7 @@ begin
 								hours <= 1;
 							end
 							
-						end
-						
+						end	
 				 end
 			end
 		end
